@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    font-family: monospace;
+    font-size: 14px;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    float: right;
+}
+
+li {
+    margin: 5px 0;
+}
+
+#chatControls {
+    overflow: auto;
+    margin: 0 0 5px 0
+}
+
+#userlist {
+    position: fixed;
+    left: 50%;
+    list-style: none;
+    margin-left: 250px;
+    background: #f0f0f9;
+    padding: 5px 10px;
+    width: 150px;
+    top: 11px;
+}
+
+#chat p {
+    margin: 5px 0;
+    font-weight: 300
+}
+
+#chat .timestamp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+
+#chat article {
+    background: #f1f1f1;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #aaa;
+    position: relative;
+    word-wrap: break-word;
+}
+
+#error {
+    background: #ff6d6d;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #ff4242;
+    position: relative;
+    word-wrap: break-word;
+    -webkit-animation: seconds 1.0s forwards;
+    -webkit-animation-iteration-count: 1;
+    animation: seconds 1.0s forwards;
+    animation-iteration-count: 1;
+}
+
+#chat article:first-of-type {
+    background: #c9edc3;
+    border-left-color: #74a377;
+    animation: enter .2s 1;
+}
+
+@keyframes enter {
+    from { transform: none;        }
+    50%  { transform: scale(0.95); }
+    to   { transform: none;        }
+}
+
+@keyframes hidefirst {
+    0% { opacity: 0;
+        left: -9999px;}
+    50%  { opacity: 0; }
+    100%   { opacity: 1;        }
+}
